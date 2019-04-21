@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Administration</title>
+  <link href="https://fonts.googleapis.com/css?family=Emblema+One|Exo+2:700|Neuton:800|Teko:700" rel="stylesheet">
+  <style>
+  html, body{
+    padding:0; margin:0;
+    height:100vh;width:100vw;
+    background: rgb(219,52,11);
+    background: linear-gradient(180deg, rgba(219,52,11,1) 0%, rgba(244,169,37,1) 65%, rgba(219,156,36,1) 100%);
+
+    overflow:hidden;
+  }
+  header{height:25vh;font-family:'Exo 2';letter-spacing:0px;color:white;font-size:50px;text-align:center;}
+  #orb{
+    height:25vh;width:25vh;
+    border-radius:30vh;
+    border:7.5vh solid white;
+    box-shadow:2vh 2vh 3vh 1vh rgba(0,0,0,0.45);
+    margin:auto;
+    z-index:100;
+  }
+
+
+  @keyframes shimmerBG {
+      0% {left:-150vw; top: -150vh}
+      100% {left:150vw; top: 150vh}
+  }
+
+  .shimmer{
+    height:300vh;width:300vw;
+    position:absolute;
+    background-image: linear-gradient(160deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 30%,rgba(255,255,255,0.35) 40%, rgba(255,255,255,0) 50%);
+    background-repeat: repeat-y;
+    left:-150vw;
+    top:-150vh;
+    animation: shimmerBG 6s linear infinite 1s;
+  }
+  </style>
+
+</head>
+<body>
+  <div class="shimmer"></div>
+  <header>
+    <h1>Leogen Ventures</h1>
+  </header>
+  <section id="orb"></section>
+  <!--Scripts below here -->
+  <footer>
+    
+  </footer>
+  <script>
+  </script>
+</body>
+</html>
