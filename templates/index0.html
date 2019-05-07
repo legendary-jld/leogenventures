@@ -1,0 +1,509 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Leogen Ventures LLC</title>
+        <link rel="shortcut icon" href="fav_icon.png" type="image/x-icon">
+        <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/bulma@0.7.4/css/bulma.min.css" />
+        <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
+        <style>
+        .has-same-height .card {
+          height: 320px;
+          overflow: hidden;
+        }
+
+        .card-content h3 {
+          text-align: center;
+        }
+
+        .table-profile td,
+        th {
+          border: none !important;
+        }
+
+        .table-profile td:first-of-type {
+          font-weight: bold;
+        }
+
+        .skills-content .media {
+          margin: 0 !important;
+          padding: 4px !important;
+          border: 0 !important;
+        }
+
+        .skills-content .progress {
+          height: 4px !important;
+        }
+
+        .custom-tags {
+          text-align: center !important;
+          display: block;
+        }
+
+        .portfolio-container .card {
+          margin-bottom: 2em;
+        }
+
+        .section-heading {
+          text-align: center;
+          margin-top: 1em;
+          margin-bottom: 6em;
+        }
+        html,body {
+          background: #EFF3F4;
+          font-family: 'Open Sans', serif;
+        }
+        .hero-body .container {
+          max-width: 700px;
+        }
+        .hero-body .title {
+          color: hsl(192,17%,99%) !important;
+        }
+        .hero-body .subtitle {
+          color: hsl(192,17%,99%) !important;
+          padding-top: 2rem;
+          line-height: 1.5;
+        }
+        .features {
+          padding: 5rem 0;
+        }
+        .box.cta {
+          border-radius: 0;
+          border-left: none;
+          border-right: none;
+        }
+        .card-image > .fa {
+          font-size: 8rem;
+          padding-top: 2rem;
+          padding-bottom: 2rem;
+          color: #209cee;
+        }
+        .card-content .content {
+          font-size: 14px;
+          margin: 1rem 1rem;
+        }
+        .card-content .content h4 {
+          font-size: 16px;
+          font-weight: 700;
+        }
+        .card {
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+          margin-bottom: 2rem;
+        }
+        .intro {
+          padding: 5rem 0;
+          text-align: center;
+        }
+        .sandbox {
+          padding: 5rem 0;
+        }
+        .tile.notification {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+        }
+        .is-shady {
+        animation: flyintoright .4s backwards;
+        background: #fff;
+        box-shadow: rgba(0, 0, 0, .1) 0 1px 0;
+        border-radius: 4px;
+        display: inline-block;
+        margin: 10px;
+        position: relative;
+        transition: all .2s ease-in-out;
+        }
+        .is-shady:hover {
+        box-shadow: 0 10px 16px rgba(0, 0, 0, .13), 0 6px 6px rgba(0, 0, 0, .19);
+        }
+        /*adds font awesome stars*/
+        footer li:before {
+          content: '\f1b2';
+          font-family: 'FontAwesome';
+          float: left;
+          margin-left: -1.5em;
+          color: #147efb;
+        }
+
+
+        /* JDowns - below here */
+        #home{
+          background-color: #000;
+          background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.83.828-1.415 1.415L51.8 0h2.827zM5.373 0l-.83.828L5.96 2.243 8.2 0H5.374zM48.97 0l3.657 3.657-1.414 1.414L46.143 0h2.828zM11.03 0L7.372 3.657 8.787 5.07 13.857 0H11.03zm32.284 0L49.8 6.485 48.384 7.9l-7.9-7.9h2.83zM16.686 0L10.2 6.485 11.616 7.9l7.9-7.9h-2.83zm20.97 0l9.315 9.314-1.414 1.414L34.828 0h2.83zM22.344 0L13.03 9.314l1.414 1.414L25.172 0h-2.83zM32 0l12.142 12.142-1.414 1.414L30 .828 17.272 13.556l-1.414-1.414L28 0h4zM.284 0l28 28-1.414 1.414L0 2.544V0h.284zM0 5.373l25.456 25.455-1.414 1.415L0 8.2V5.374zm0 5.656l22.627 22.627-1.414 1.414L0 13.86v-2.83zm0 5.656l19.8 19.8-1.415 1.413L0 19.514v-2.83zm0 5.657l16.97 16.97-1.414 1.415L0 25.172v-2.83zM0 28l14.142 14.142-1.414 1.414L0 30.828V28zm0 5.657L11.314 44.97 9.9 46.386l-9.9-9.9v-2.828zm0 5.657L8.485 47.8 7.07 49.212 0 42.143v-2.83zm0 5.657l5.657 5.657-1.414 1.415L0 47.8v-2.83zm0 5.657l2.828 2.83-1.414 1.413L0 53.456v-2.83zM54.627 60L30 35.373 5.373 60H8.2L30 38.2 51.8 60h2.827zm-5.656 0L30 41.03 11.03 60h2.828L30 43.858 46.142 60h2.83zm-5.656 0L30 46.686 16.686 60h2.83L30 49.515 40.485 60h2.83zm-5.657 0L30 52.343 22.343 60h2.83L30 55.172 34.828 60h2.83zM32 60l-2-2-2 2h4zM59.716 0l-28 28 1.414 1.414L60 2.544V0h-.284zM60 5.373L34.544 30.828l1.414 1.415L60 8.2V5.374zm0 5.656L37.373 33.656l1.414 1.414L60 13.86v-2.83zm0 5.656l-19.8 19.8 1.415 1.413L60 19.514v-2.83zm0 5.657l-16.97 16.97 1.414 1.415L60 25.172v-2.83zM60 28L45.858 42.142l1.414 1.414L60 30.828V28zm0 5.657L48.686 44.97l1.415 1.415 9.9-9.9v-2.828zm0 5.657L51.515 47.8l1.414 1.413 7.07-7.07v-2.83zm0 5.657l-5.657 5.657 1.414 1.415L60 47.8v-2.83zm0 5.657l-2.828 2.83 1.414 1.413L60 53.456v-2.83zM39.9 16.385l1.414-1.414L30 3.658 18.686 14.97l1.415 1.415 9.9-9.9 9.9 9.9zm-2.83 2.828l1.415-1.414L30 9.313 21.515 17.8l1.414 1.413 7.07-7.07 7.07 7.07zm-2.827 2.83l1.414-1.416L30 14.97l-5.657 5.657 1.414 1.415L30 17.8l4.243 4.242zm-2.83 2.827l1.415-1.414L30 20.626l-2.828 2.83 1.414 1.414L30 23.456l1.414 1.414zM56.87 59.414L58.284 58 30 29.716 1.716 58l1.414 1.414L30 32.544l26.87 26.87z' fill='%23184152' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+          background-attachment: fixed;
+        }
+        div.card-image{
+          padding-top:5vh;
+        }
+        #top-cards .card{
+          height:100%;
+        }
+        </style>
+    </head>
+    <body>
+        <section class="hero is-info is-large is-bold" id="home">
+            <div class="hero-head">
+                <nav class="navbar">
+                    <div class="container">
+                        <div class="navbar-brand">
+                            <a class="navbar-item" href="../">
+                                <img src="http://bulma.io/images/bulma-type-white.png" alt="Leogen Ventures LLC">
+                            </a>
+                            <span class="navbar-burger burger" data-target="navbarMenu">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </div>
+                        <div id="navbarMenu" class="navbar-menu">
+                            <div class="navbar-end">
+                                <div class="tabs is-right">
+                                    <ul>
+                                        <li class="is-active"><a href="#home">Home</a></li>
+                                        <li><a href="#services">Services</a></li>
+                                        <li><a href="#contact">Contact</a></li>
+                                    </ul>
+                                    <span class="navbar-item">
+                                        <a class="button is-white is-outlined" href="https://github.com/dansup/bulma-templates/blob/master/templates/hero.html">
+                                            <span class="icon">
+                                                <i class="fa fa-github"></i>
+                                            </span>
+                                            <span title="Hello from the other side">View Source</span>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h1 class="title">
+                    Leogen Ventures
+                    </h1>
+                    <h2 class="subtitle">
+                    Web development and marketing services to bring your business up to speed with the modern web.
+                    </h2>
+                </div>
+            </div>
+        </section>
+        <div class="box cta">
+            <p class="has-text-centered">
+                <span class="tag is-primary">New</span> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+        </div>
+        <section class="container" id="top-cards">
+            <div class="columns features">
+                <div class="column is-4">
+                    <div class="card is-shady">
+                        <div class="card-image has-text-centered">
+                            <i class="fas fa-bullseye fa-5x"></i>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                              <h4>Precise Solutions</h4>
+                              <p>Let your business benefit from hand-crafted
+                                 software that will lighten your load and set your
+                                 business up for immense growth.</p>
+                                <p><a href="#">Learn more</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="card is-shady">
+                        <div class="card-image has-text-centered">
+                            <i class="fas fa-dice-six fa-5x"></i>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <h4>Precise Solutions</h4>
+                                <p>Let your business benefit from hand-crafted
+                                   software that will lighten your load and set your
+                                   business up for immense growth.</p>
+                                <p><a href="#">Learn more</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="card is-shady">
+                        <div class="card-image has-text-centered">
+                            <i class="fas fa-flag-checkered fa-5x"></i>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <h4>Experience &amp; Knowledge</h4>
+                                <p>Leogen Ventures has a broad and deep knowledge base,
+                                  with the experience to answer tough questions
+                                  and solve difficult problems</p>
+                                <p><a href="#">Learn more</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="intro column is-8 is-offset-2">
+                <h2 class="title">Perfect for developers or designers!</h2><br>
+                <p class="subtitle">Vel fringilla est ullamcorper eget nulla facilisi. Nulla facilisi nullam vehicula ipsum a. Neque egestas congue quisque egestas diam in arcu cursus.</p>
+            </div>
+            <div class="sandbox">
+                <div class="tile is-ancestor">
+                    <div class="tile is-parent is-shady">
+                        <article class="tile is-child notification is-white">
+                            <p class="title">Hello World</p>
+                            <p class="subtitle">What is up?</p>
+                        </article>
+                    </div>
+                    <div class="tile is-parent is-shady">
+                        <article class="tile is-child notification is-white">
+                            <p class="title">Foo</p>
+                            <p class="subtitle">Bar</p>
+                        </article>
+                    </div>
+                    <div class="tile is-parent is-shady">
+                        <article class="tile is-child notification is-white">
+                            <p class="title">Third column</p>
+                            <p class="subtitle">With some content</p>
+                            <div class="content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="tile is-ancestor">
+                    <div class="tile is-vertical is-8">
+                        <div class="tile">
+                            <div class="tile is-parent is-vertical">
+                                <article class="tile is-child notification is-white">
+                                    <p class="title">Vertical tiles</p>
+                                    <p class="subtitle">Top box</p>
+                                </article>
+                                <article class="tile is-child notification is-white">
+                                    <p class="title">Vertical tiles</p>
+                                    <p class="subtitle">Bottom box</p>
+                                </article>
+                            </div>
+                            <div class="tile is-parent">
+                                <article class="tile is-child notification is-white">
+                                    <p class="title">Middle box</p>
+                                    <p class="subtitle">With an image</p>
+                                    <figure class="image is-4by3">
+                                        <img src="https://picsum.photos/640/480/?random" alt="Description">
+                                    </figure>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="tile is-parent is-shady">
+                            <article class="tile is-child notification is-white">
+                                <p class="title">Wide column</p>
+                                <p class="subtitle">Aligned with the right column</p>
+                                <div class="content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="tile is-parent is-shady">
+                        <article class="tile is-child notification is-white">
+                            <div class="content">
+                                <p class="title">Tall column</p>
+                                <p class="subtitle">With even more content</p>
+                                <div class="content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula
+                                    eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
+                                    <p>Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis. Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin felis neque sit amet erat. Maecenas imperdiet
+                                    felis nisi, fringilla luctus felis hendrerit sit amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget varius ligula, at volutpat tortor.</p>
+                                    <p>Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue lectus dolor consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras ullamcorper a nunc ac porta. Aliquam
+                                    ut aliquet lacus, quis faucibus libero. Quisque non semper leo.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="tile is-ancestor">
+                    <div class="tile is-parent is-shady">
+                        <article class="tile is-child notification is-white">
+                            <p class="title">Side column</p>
+                            <p class="subtitle">With some content</p>
+                            <div class="content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="tile is-parent is-8 is-shady">
+                        <article class="tile is-child notification is-white">
+                            <p class="title">Main column</p>
+                            <p class="subtitle">With some content</p>
+                            <div class="content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="tile is-ancestor">
+                    <div class="tile is-parent is-8 is-shady">
+                        <article class="tile is-child notification is-white">
+                            <p class="title">Murphy's law</p>
+                            <p class="subtitle">Anything that can go wrong will go wrong</p>
+                            <div class="content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="tile is-parent is-shady">
+                        <article class="tile is-child notification is-white">
+                            <p class="title">Main column</p>
+                            <p class="subtitle">With some content</p>
+                            <div class="content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Achievement Level -->
+        <section class="section">
+          <nav class="level">
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Tweets</p>
+                <p class="title">3,456</p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Following</p>
+                <p class="title">123</p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Followers</p>
+                <p class="title">456K</p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Likes</p>
+                <p class="title">789</p>
+              </div>
+            </div>
+          </nav>
+        </section>
+
+
+        <!-- Contact -->
+        <section class="section" id="contact">
+          <div class="container">
+            <div class="section-heading">
+              <h3 class="title is-2">Contact</h3>
+              <h4 class="subtitle is-5">Get in touch</h4>
+            </div>
+            <br>
+
+            <div class="columns">
+              <div class="column is-6 is-offset-3">
+                <div class="box">
+                  <div class="field">
+                    <label class="label">Name</label>
+                    <div class="control">
+                      <input class="input" type="text" placeholder="Text input">
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control has-icons-left">
+                      <input class="input" type="email" placeholder="Email input" value="">
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label class="label">Message</label>
+                    <div class="control">
+                      <textarea class="textarea" placeholder="Textarea"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="field is-grouped has-text-centered">
+                    <div class="control">
+                      <button class="button is-link is-large"><span class="icon">
+                          <i class="fas fa-envelope"></i>
+                        </span>
+                        <span>Submit</span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-3 is-offset-2">
+                        <h2><strong>Category</strong></h2>
+                        <ul>
+                            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                            <li><a href="#">Vestibulum errato isse</a></li>
+                            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                            <li><a href="#">Aisia caisia</a></li>
+                            <li><a href="#">Murphy's law</a></li>
+                            <li><a href="#">Flimsy Lavenrock</a></li>
+                            <li><a href="#">Maven Mousie Lavender</a></li>
+                        </ul>
+                    </div>
+                    <div class="column is-3">
+                        <h2><strong>Category</strong></h2>
+                        <ul>
+                            <li><a href="#">Labore et dolore magna aliqua</a></li>
+                            <li><a href="#">Kanban airis sum eschelor</a></li>
+                            <li><a href="#">Modular modern free</a></li>
+                            <li><a href="#">The king of clubs</a></li>
+                            <li><a href="#">The Discovery Dissipation</a></li>
+                            <li><a href="#">Course Correction</a></li>
+                            <li><a href="#">Better Angels</a></li>
+                        </ul>
+                    </div>
+                    <div class="column is-4">
+                        <h2><strong>Category</strong></h2>
+                        <ul>
+                            <li><a href="#">Objects in space</a></li>
+                            <li><a href="#">Playing cards with coyote</a></li>
+                            <li><a href="#">Goodbye Yellow Brick Road</a></li>
+                            <li><a href="#">The Garden of Forking Paths</a></li>
+                            <li><a href="#">Future Shock</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content has-text-centered">
+                    <p>
+                        <a class="icon" href="https://github.com/dansup/bulma-templates">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </p>
+                    <div class="control level-item">
+                        <a href="https://github.com/dansup/bulma-templates">
+                            <div class="tags has-addons">
+                                <span class="tag is-dark">Bulma Templates</span>
+                                <span class="tag is-info">MIT license</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <script src="../js/bulma.js"></script>
+        </footer>
+    </body>
+</html>
